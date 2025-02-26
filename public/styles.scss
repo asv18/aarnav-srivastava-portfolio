@@ -50,3 +50,25 @@ button {
   text-align: center;
   margin: 2rem;
 }
+
+.red {
+  color: red;
+}
+
+.button-20 {
+  padding: 20px;
+  transition: 200ms all cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.button-20:hover {
+  scale: 125%;
+  background-color: darkslategray;
+}
+
+.button-20.clicked {
+  scale: 75%;
+}
+
+.text-20 {
+  font-size: 20px;
+}

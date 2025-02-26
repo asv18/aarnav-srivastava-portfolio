@@ -1,4 +1,4 @@
-use crate::components::counter_btn::Button;
+use crate::components::{counter_btn::Button, practice::Practice, iteration::Iteration};
 use leptos::prelude::*;
 
 /// Default Home Page
@@ -25,7 +25,7 @@ pub fn Home() -> impl IntoView {
         }>
 
             <div class="container">
-            
+
                 <picture>
                     <source
                         srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg"
@@ -46,6 +46,13 @@ pub fn Home() -> impl IntoView {
                     <Button increment=5 />
                 </div>
 
+                <div id="practice">
+                    <Practice />
+                </div>
+
+                <div id="iteration">
+                    <Iteration />
+                </div>
             </div>
         </ErrorBoundary>
     }
