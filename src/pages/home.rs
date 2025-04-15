@@ -1,7 +1,10 @@
-use crate::components::{counter_btn::Button, practice::Practice, iteration::Iteration};
+// use crate::components::{counter_btn::Button, practice::Practice, iteration::Iteration, forms::Forms};
 use leptos::prelude::*;
 
+use crate::components::heading::Heading;
+
 /// Default Home Page
+#[allow(non_snake_case)]
 #[component]
 pub fn Home() -> impl IntoView {
     view! {
@@ -24,36 +27,44 @@ pub fn Home() -> impl IntoView {
             }
         }>
 
-            <div class="container">
-
-                <picture>
-                    <source
-                        srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg"
-                        media="(prefers-color-scheme: dark)"
-                    />
-                    <img
-                        src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg"
-                        alt="Leptos Logo"
-                        height="200"
-                        width="400"
-                    />
-                </picture>
-
-                <h1>"Welcome to Leptos"</h1>
-
-                <div class="buttons">
-                    <Button />
-                    <Button increment=5 />
-                </div>
-
-                <div id="practice">
-                    <Practice />
-                </div>
-
-                <div id="iteration">
-                    <Iteration />
-                </div>
+            <div class="content">
+                <Heading />
             </div>
+
+        // <div class="container">
+
+        // <picture>
+        // <source
+        // srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg"
+        // media="(prefers-color-scheme: dark)"
+        // />
+        // <img
+        // src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg"
+        // alt="Leptos Logo"
+        // height="200"
+        // width="400"
+        // />
+        // </picture>
+
+        // <h1>"Welcome to Leptos"</h1>
+
+        // <div class="buttons">
+        // <Button />
+        // <Button increment=5 />
+        // </div>
+
+        // <div id="practice">
+        // <Practice />
+        // </div>
+
+        // <div id="iteration">
+        // <Iteration />
+        // </div>
+
+        // <div>
+        // <Forms />
+        // </div>
+        // </div>
         </ErrorBoundary>
     }
 }

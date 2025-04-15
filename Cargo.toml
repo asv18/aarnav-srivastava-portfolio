@@ -2,7 +2,9 @@
 name = "portfolio-website"
 version = "0.1.0"
 edition = "2021"
-authors = ["Aarnav Srivastava <70161949+AarnavSrivastava@users.noreply.github.com>"]
+authors = [
+    "Aarnav Srivastava <70161949+AarnavSrivastava@users.noreply.github.com>",
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -13,6 +15,7 @@ leptos_router = { version = "0.7" }
 console_log = "1"
 log = "0.4"
 console_error_panic_hook = "0.1"
+# gloo = "0.11.0"
 
 # utils
 # strum = { version = "0.25", features = ["derive", "strum_macros"] }
