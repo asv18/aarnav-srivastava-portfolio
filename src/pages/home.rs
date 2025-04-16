@@ -1,7 +1,7 @@
 // use crate::components::{counter_btn::Button, practice::Practice, iteration::Iteration, forms::Forms};
 use leptos::prelude::*;
 
-use crate::components::heading::Heading;
+use crate::components::body::Body;
 
 /// Default Home Page
 #[allow(non_snake_case)]
@@ -27,8 +27,8 @@ pub fn Home() -> impl IntoView {
             }
         }>
 
-            <div class="content">
-                <Heading />
+            <div class="scaffold">
+                <Body />
             </div>
 
         // <div class="container">

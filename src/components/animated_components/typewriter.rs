@@ -4,21 +4,20 @@ use std::{cell::RefCell, rc::Rc};
 use leptos::prelude::*;
 use leptos::wasm_bindgen::{prelude::Closure, JsCast};
 
-#[allow(non_snake_case)]
+#[allow(non_snake_case, dead_code)]
 #[component]
-pub fn Heading() -> impl IntoView {
+pub fn Typewriter(
+    target_name: &'static str,
+    per_char_duration: f64,
+    set_toggle: WriteSignal<bool>
+) -> impl IntoView {
     let (name, set_name) = signal("".to_string());
 
     Effect::new(move |_| {
-        typewriter(30.0,  "Aarnav Srivastava", name, set_name)
+        typewriter(per_char_duration,  target_name, name, set_name, set_toggle)
     });
 
-    view! {
-        <div class="heading">
-            // <img src="/images/larry.jpeg" alt="Profile Image" class="profile" />
-            <h1 class="typewriter">{name}</h1>
-        </div>
-    }
+    view! { <h1 class="typewriter">{name}</h1> }
 }
 
 use leptos::wasm_bindgen::prelude::*;
@@ -35,22 +34,26 @@ fn request_animation_frame(f: &Closure<dyn FnMut()>) {
 }
 
 fn typewriter(
-    per_char_duration: f64,
-    target: &str,
+    duration: f64,
+    target: &'static str,
     current_text: ReadSignal<String>,
     signal: WriteSignal<String>,
+    signal_end: WriteSignal<bool>,
 ) -> Result<(), JsValue> {
     let f = Rc::new(RefCell::new(None));
     let g = f.clone();
 
     let mut start_time: Option<f64> = None;
-    let mut target = VecDeque::from(Vec::from(target));
+
+    let mut target = target.chars().into_iter().collect::<VecDeque<char>>();
 
     *g.borrow_mut() = Some(Closure::new(move || {
         if target.is_empty() {
             // Drop our handle to this closure so that it will get cleaned
             // up once we return.
             let _ = f.borrow_mut().take();
+            signal_end.set(true);
+
             return;
         }
 
@@ -58,7 +61,7 @@ fn typewriter(
 
         let start = start_time.get_or_insert(timestamp);
         let elapsed = timestamp - *start;
-        let progress = (elapsed / per_char_duration).min(1.0);
+        let progress = (elapsed / duration).min(1.0);
 
         // Set the body's text content to the next character based on time elapsed
         // requestAnimationFrame callback has fired.

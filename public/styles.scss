@@ -24,8 +24,6 @@ html {
     background-color: var(--color-background);
     padding: 0;
     margin: 0;
-    height: 100%;
-    width: 100%;
 }
 
 h1 {
@@ -36,10 +34,12 @@ h1 {
 
 .root {
     // position: absolute;
-    height: 100%;
-    width: 100%;
     color: var(--color-text);
     font-family: "IBM Plex Sans";
+}
+
+.hidden {
+    display: none,
 }
 
 .typewriter {
@@ -47,16 +47,34 @@ h1 {
     white-space: nowrap;
     padding-right: 10px;
     animation: blink-caret .75s step-end infinite;
+    flex-wrap: wrap;
 }
 
-.content {
+.scaffold {
     display: flex;
     flex-direction: column;
     // justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 30px;
-    // padding-left: 40px;
+    align-items:baseline;
+    padding: 30px 40px;
+}
+
+.content {
+    transition: all;
+    transition-duration: 500ms;
+    opacity: 100%;
+}
+
+.content-hidden {
+    transform: translate(0px, -40px);
+    transition: all;
+    transition-duration: 500ms;
+    opacity: 0%;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 .heading {
