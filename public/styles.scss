@@ -29,7 +29,6 @@ html {
 h1 {
     font-size: 3rem;
     font-family: 'IBM Plex Mono';
-    width: fit-content;
 }
 
 .root {
@@ -72,9 +71,19 @@ h1 {
 }
 
 .body {
+    // padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+}
+
+.child {
+    height: 100vh;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .heading {
