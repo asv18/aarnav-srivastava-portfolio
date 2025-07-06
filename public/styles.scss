@@ -22,12 +22,11 @@
 
 html {
     background-color: var(--color-background);
-    padding: 0;
     margin: 0;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-family: 'IBM Plex Mono';
 }
 
@@ -44,7 +43,6 @@ h1 {
 .typewriter {
     border-right: .15em solid var(--color-accent); /* The typewriter cursor */
     white-space: nowrap;
-    padding-right: 10px;
     animation: blink-caret .75s step-end infinite;
     flex-wrap: wrap;
 }
@@ -54,30 +52,36 @@ h1 {
     flex-direction: column;
     // justify-content: center;
     align-items:baseline;
-    padding: 30px 40px;
+    padding: 60px 80px;
+}
+
+.para {
+    font-size: 1.25em;
 }
 
 .content {
     transition: all;
-    transition-duration: 500ms;
+    transition-duration: 750ms;
     opacity: 100%;
 }
 
 .content-hidden {
-    transform: translate(0px, -40px);
-    transition: all;
-    transition-duration: 500ms;
+    transform: translate(-40px, 0px);
     opacity: 0%;
 }
 
 .body {
-    // padding-bottom: 50px;
     display: flex;
     flex-direction: column;
+    gap: 50px;
+}
+
+.delay {
+    transition-delay: 250ms;
 }
 
 .child {
-    height: 100vh;
+    height: 50vh;
 }
 
 .center {
