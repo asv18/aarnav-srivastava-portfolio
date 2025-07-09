@@ -4,4 +4,5 @@
 // pub mod forms;
 
 pub mod body;
-pub mod animated_components;
+mod animated_components;
+mod project_container;

@@ -1,6 +1,6 @@
 use leptos::{html::Div, prelude::*};
 use leptos_use::use_element_visibility;
-use crate::components::animated_components::typewriter::Typewriter;
+use crate::{components::{animated_components::typewriter::Typewriter, project_container::ProjectContainer}, utils::types::project::Project};
 
 #[allow(non_snake_case)]
 #[component]
@@ -8,7 +8,22 @@ pub fn Body() -> impl IntoView {
     let (toggle, set_toggle) = signal(false);
 
     // let titles = vec!["Software Developer", "Researcher", "Physicist", "Computer Scientist"];
-    let projects = vec!["Circles", "CampusConnect", "Josephson Junctions", "MITRA"];
+    let projects = vec![
+        Project::from_str("Name:
+Circles
+
+Description:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum felis a quam tincidunt, sit amet fermentum massa tempus. Aliquam erat volutpat. Curabitur vel augue nec velit vehicula luctus. Morbi euismod orci at dolor efficitur, at dignissim leo dictum.
+Suspendisse potenti. Vivamus faucibus tincidunt nisl at lobortis. Sed fringilla, lacus ut sodales efficitur, mi nulla feugiat neque, non imperdiet nunc ipsum sed elit. Donec vel lacus nec leo vulputate viverra nec et elit. Proin id porttitor velit, sed ultrices lorem.
+Nullam eu nulla nec sapien viverra eleifend. Pellentesque porttitor lorem ut ex efficitur, at rhoncus nisi tincidunt. Nunc feugiat diam vitae arcu porttitor, nec malesuada sapien fermentum. Integer ultricies purus eget dapibus tempor. Duis eu sapien nec metus ultricies pulvinar.
+
+Tech Stack:
+Flutter, SQL, Deno
+
+Image:
+/path/to/image.png").unwrap_or_default(),
+    ];
+    // let projects = vec!["Circles", "CampusConnect", "Josephson Junctions", "MITRA"];
 
     let projects_div = NodeRef::<Div>::new();
     let projects_vis = use_element_visibility(projects_div);
@@ -25,7 +40,7 @@ pub fn Body() -> impl IntoView {
                     />
                 </div>
                 <div class=move || {
-                    format!("para {} ", if toggle.get() { "content" } else { "content-hidden" })
+                    format!("desc {} ", if toggle.get() { "content" } else { "content-hidden" })
                 }>
                     // Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies diam id metus mollis, eu feugiat dui congue. Ut mattis pretium velit, a convallis nulla pretium at. Maecenas quis quam porta, blandit nulla vel, laoreet lacus. Nunc mauris lacus, ultricies vel purus at, condimentum convallis ex. Quisque arcu felis, egestas id urna at, vulputate efficitur nunc. Morbi tincidunt enim a augue tristique, quis auctor erat posuere. Donec nec leo ut nunc scelerisque dignissim at a lorem. Vestibulum rhoncus, nisl id ultricies dictum, velit risus scelerisque leo, at aliquam lorem augue ac felis. In sed velit non leo ullamcorper interdum suscipit non lacus. Fusce in consequat neque, vel pellentesque ligula. Phasellus congue quis lorem nec ultricies. Nullam faucibus ante quam, condimentum fermentum ex dignissim in.
                     // <h2 class="heading-2">"And I'm an aspiring..."</h2>
@@ -59,8 +74,19 @@ pub fn Body() -> impl IntoView {
                         )
                     }
                 >
-                    <h2 class="heading-2">"Some of my projects"</h2>
-                    <ul>{projects.into_iter().map(|n| view! { <li>{n}</li> }).collect_view()}</ul>
+                    <h1 class="heading-2">"My work"</h1>
+                    <div class="column">
+                        {projects
+                            .iter()
+                            .map(|item| {
+                                view! {
+                                    <div>
+                                        <ProjectContainer project=item.clone() />
+                                    </div>
+                                }
+                            })
+                            .collect_view()}
+                    </div>
                     <h2 class="heading-2">"...and more!"</h2>
                 </div>
             </div>
