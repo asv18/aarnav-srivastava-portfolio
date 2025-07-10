@@ -9,19 +9,7 @@ pub fn Body() -> impl IntoView {
 
     // let titles = vec!["Software Developer", "Researcher", "Physicist", "Computer Scientist"];
     let projects = vec![
-        Project::from_str("Name:
-Circles
-
-Description:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum felis a quam tincidunt, sit amet fermentum massa tempus. Aliquam erat volutpat. Curabitur vel augue nec velit vehicula luctus. Morbi euismod orci at dolor efficitur, at dignissim leo dictum.
-Suspendisse potenti. Vivamus faucibus tincidunt nisl at lobortis. Sed fringilla, lacus ut sodales efficitur, mi nulla feugiat neque, non imperdiet nunc ipsum sed elit. Donec vel lacus nec leo vulputate viverra nec et elit. Proin id porttitor velit, sed ultrices lorem.
-Nullam eu nulla nec sapien viverra eleifend. Pellentesque porttitor lorem ut ex efficitur, at rhoncus nisi tincidunt. Nunc feugiat diam vitae arcu porttitor, nec malesuada sapien fermentum. Integer ultricies purus eget dapibus tempor. Duis eu sapien nec metus ultricies pulvinar.
-
-Tech Stack:
-Flutter, SQL, Deno
-
-Image:
-/path/to/image.png").unwrap_or_default(),
+        Project::from_str("Name:\nCircles\nDescription:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum felis a quam tincidunt, sit amet fermentum massa tempus. Aliquam erat volutpat. Curabitur vel augue nec velit vehicula luctus. Morbi euismod orci at dolor efficitur, at dignissim leo dictum.\nSuspendisse potenti. Vivamus faucibus tincidunt nisl at lobortis. Sed fringilla, lacus ut sodales efficitur, mi nulla feugiat neque, non imperdiet nunc ipsum sed elit. Donec vel lacus nec leo vulputate viverra nec et elit. Proin id porttitor velit, sed ultrices lorem.\nNullam eu nulla nec sapien viverra eleifend. Pellentesque porttitor lorem ut ex efficitur, at rhoncus nisi tincidunt. Nunc feugiat diam vitae arcu porttitor, nec malesuada sapien fermentum. Integer ultricies purus eget dapibus tempor. Duis eu sapien nec metus ultricies pulvinar.\nTech Stack:\nFlutter, SQL, Deno\nLink:\nhttps://github.com/asv18/Circles-App").unwrap_or_default(),
     ];
     // let projects = vec!["Circles", "CampusConnect", "Josephson Junctions", "MITRA"];
 

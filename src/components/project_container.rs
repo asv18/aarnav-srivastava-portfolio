@@ -7,15 +7,32 @@ use crate::utils::types::project::Project;
 pub fn ProjectContainer(
     project: Project,
 ) -> impl IntoView {
+
     view! {
         <div class="row">
             <div class="proj-container content">
-                <div class="title">{project.name}</div>
+                <a href=project.link target="_blank" class="title">
+                    {project.name}
+                </a>
                 // <div class="proj-spacer"></div>
-                <div class="proj-container-stack"></div>
+                <div class="proj-container-stack">
+                    {project
+                        .tech_stack
+                        .into_iter()
+                        .map(|item| {
+                            view! {
+                                <div class=format!(
+                                    "boxed {}",
+                                    item.to_lowercase(),
+                                )>{item.clone()}</div>
+                            }
+                        })
+                        .collect_view()}
+                </div>
                 <div class="para proj-container-hidden">{project.description}</div>
+            // <div>{project.image}</div>
             </div>
-            <div>"Cube"</div>
+        // <div>"Cube"</div>
         </div>
     }
 }

@@ -154,11 +154,27 @@ h1 {
     // font-family: 'IBM Plex Mono';
     font-size: 2em;
     font-weight: bold;
+    color: var(--color-text);
+    transition: all 750ms ease;
+    text-decoration-line: none;
+    text-decoration-color: var(--color-accent);
+    width: fit-content;
+}
+
+.proj-container:hover .title {
+    color: var(--color-text-dark);
+    transition: all 750ms ease;
+}
+
+.title:hover {
+    transition: all 750ms ease;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
 }
 
 .proj-container-stack {
     // flex: 2;
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -169,20 +185,21 @@ h1 {
 .proj-container-hidden {
     // flex: 0;
     // scale: 0%;
+    margin-top: 10px;
     opacity: 0%;
     // max-height: 0px;
     overflow: hidden;
-    transition: opacity color 750ms ease;
-    color: var(--color-tertiary);
+    transition: all 750ms ease;
+    // color: var(--color-tertiary);
 }
 
 .proj-container:hover .proj-container-hidden {
     // flex: 1;
     // scale: 100%;
     opacity: 100%;
-    max-height: fit-content;
-    transition: opacity color 750ms ease;
-    color: var(--color-text-dark);
+    // max-height: fit-content;
+    transition: all 750ms ease;
+    // color: var(--color-text-dark);
 }
 
 .row {
@@ -190,99 +207,48 @@ h1 {
     flex-direction: row;
 }
 
-svg {
+.svg {
     height: 20px
 }
 
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
+// .flutter {
+//     color: #01A8FF;
 // }
 
-// :root {
-//   --color-one: #FCFAFA;
-//   --color-two: #F1DABF;
-//   --color-three: #EDCEAB;
-//   --color-four: #EAC49A;
-//   --color-quinary: #E3B178;
+.boxed {
+    padding: 2px 5px;
+    border: 2px solid var(--color-accent);
+}
+
+// shadows testing
+
+// @mixin text-shadow-effect($colors, $step) {
+//   $shadow-list: ();
+//   @for $i from 1 through length($colors) {
+//     $x: $i * $step;
+//     $y: $i * $step;
+//     $color: nth($colors, $i);
+//     $shadow-list: append($shadow-list, #{$x} #{$y} 0 #{$color}, comma);
+//   }
+//   text-shadow: $shadow-list;
 // }
 
-// .content {
-//     display: flex;
-//     align-content: center;
-//     justify-content: center;
+// $flutter-colors: #02569B, #01A8FF, #47B4FF, #FFFFFF;
+
+// .flutter {
+//   @include text-shadow-effect($flutter-colors, 0.75px);
+//   font-size: 16px;
+//   text-transform: uppercase;
+//   color: #02569B;
+//   text-align: center;
+//   letter-spacing: 0.3rem;
 // }
 
-// .text-shadows {
-//     text-shadow: 3px 3px 0 var(--color-two), 6px 6px 0 var(--color-three),
-//     9px 9px var(--color-four), 12px 12px 0 var(--color-quinary);
-//     // font-family: bungee, sans-serif;
-//     // font-weight: 400;
-//     text-transform: uppercase;
-//     font-size: calc(2rem + 5vw);
-//     text-align: center;
-//     margin: 0;
-//     color: var(--color-one);
-//     animation: shadows 1.2s ease-in infinite;
-//     letter-spacing: 0.4rem;
+// .sql {
+//   @include text-shadow-effect($flutter-colors, 0.75px);
+//   font-size: 16px;
+//   text-transform: uppercase;
+//   color: #02569B;
+//   text-align: center;
+//   letter-spacing: 0.3rem;
 // }
-
-// @keyframes shadows {
-//     0% {
-//         text-shadow: none;
-//     }
-//     10% {
-//         transform: translate(-3px, -3px);
-//         text-shadow: 3px 3px 0 var(--color-two);
-//     }
-//     20% {
-//         transform: translate(-6px, -6px);
-//         text-shadow: 3px 3px 0 var(--color-two),
-//             6px 6px 0 var(--color-three);
-//     }
-//     30% {
-//         transform: translate(-9px, -9px);
-//         text-shadow: 3px 3px 0 var(--color-two),
-//             6px 6px 0 var(--color-three), 9px 9px var(--color-four);
-//     }
-//     40% {
-//         transform: translate(-12px, -12px);
-//         text-shadow: 3px 3px 0 var(--color-two),
-//             6px 6px 0 var(--color-three), 9px 9px var(--color-four),
-//             12px 12px 0 var(--color-quinary);
-//     }
-//     50% {
-//         transform: translate(-12px, -12px);
-//         text-shadow: 3px 3px 0 var(--color-two),
-//             6px 6px 0 var(--color-three), 9px 9px var(--color-four),
-//             12px 12px 0 var(--color-quinary);
-//     }
-//     60% {
-//         text-shadow: 3px 3px 0 var(--color-two),
-//             6px 6px 0 var(--color-three), 9px 9px var(--color-four),
-//             12px 12px 0 var(--color-quinary);
-//     }
-//     70% {
-//         text-shadow: 3px 3px 0 var(--color-two),
-//             6px 6px 0 var(--color-three), 9px 9px var(--color-four);
-//     }
-//     80% {
-//         text-shadow: 3px 3px 0 var(--color-two),
-//             6px 6px 0 var(--color-three);
-//     }
-//     90% {
-//         text-shadow: 3px 3px 0 var(--color-two);
-//     }
-//     100% {
-//         text-shadow: none;
-//     }
-// }
-
-// /*
-//   --color-primary: #5192ED;
-//   --color-secondary: #69A1F0;
-//   --color-three: #7EAEF2;
-//   --color-four: #90BAF5;
-//   --color-five: #A2C4F5;
-// */
