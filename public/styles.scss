@@ -157,19 +157,20 @@ h1 {
     color: var(--color-text);
     transition: all 750ms ease;
     text-decoration-line: none;
-    text-decoration-color: var(--color-accent);
+    text-decoration-color: var(--color-primary);
     width: fit-content;
 }
 
 .proj-container:hover .title {
     color: var(--color-text-dark);
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
     transition: all 750ms ease;
 }
 
-.title:hover {
-    transition: all 750ms ease;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
+.proj-container:hover .title:hover {
+    text-decoration-color: var(--color-accent);
+    transition: all 300ms ease;
 }
 
 .proj-container-stack {
@@ -217,7 +218,26 @@ h1 {
 
 .boxed {
     padding: 2px 5px;
+    transition: all 750ms ease;
     border: 2px solid var(--color-accent);
+}
+
+.proj-container:hover .boxed {
+    transition: all 750ms ease;
+    border: 2px solid var(--color-primary);
+}
+
+.heading-2 {
+    color: var(--color-text);
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--color-primary);
+    transition: all 300ms ease;
+}
+
+.heading-2:hover {
+    text-decoration-color: var(--color-accent);
+    transition: all 300ms ease;
 }
 
 // shadows testing

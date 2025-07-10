@@ -10,11 +10,19 @@ pub fn Body() -> impl IntoView {
     // let titles = vec!["Software Developer", "Researcher", "Physicist", "Computer Scientist"];
     let projects = vec![
         Project::from_str("Name:\nCircles\nDescription:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum felis a quam tincidunt, sit amet fermentum massa tempus. Aliquam erat volutpat. Curabitur vel augue nec velit vehicula luctus. Morbi euismod orci at dolor efficitur, at dignissim leo dictum.\nSuspendisse potenti. Vivamus faucibus tincidunt nisl at lobortis. Sed fringilla, lacus ut sodales efficitur, mi nulla feugiat neque, non imperdiet nunc ipsum sed elit. Donec vel lacus nec leo vulputate viverra nec et elit. Proin id porttitor velit, sed ultrices lorem.\nNullam eu nulla nec sapien viverra eleifend. Pellentesque porttitor lorem ut ex efficitur, at rhoncus nisi tincidunt. Nunc feugiat diam vitae arcu porttitor, nec malesuada sapien fermentum. Integer ultricies purus eget dapibus tempor. Duis eu sapien nec metus ultricies pulvinar.\nTech Stack:\nFlutter, SQL, Deno\nLink:\nhttps://github.com/asv18/Circles-App").unwrap_or_default(),
+        Project::from_str("Name:\nCircles\nDescription:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum felis a quam tincidunt, sit amet fermentum massa tempus. Aliquam erat volutpat. Curabitur vel augue nec velit vehicula luctus. Morbi euismod orci at dolor efficitur, at dignissim leo dictum.\nSuspendisse potenti. Vivamus faucibus tincidunt nisl at lobortis. Sed fringilla, lacus ut sodales efficitur, mi nulla feugiat neque, non imperdiet nunc ipsum sed elit. Donec vel lacus nec leo vulputate viverra nec et elit. Proin id porttitor velit, sed ultrices lorem.\nNullam eu nulla nec sapien viverra eleifend. Pellentesque porttitor lorem ut ex efficitur, at rhoncus nisi tincidunt. Nunc feugiat diam vitae arcu porttitor, nec malesuada sapien fermentum. Integer ultricies purus eget dapibus tempor. Duis eu sapien nec metus ultricies pulvinar.\nTech Stack:\nFlutter, SQL, Deno\nLink:\nhttps://github.com/asv18/Circles-App").unwrap_or_default(),
+        Project::from_str("Name:\nCircles\nDescription:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum felis a quam tincidunt, sit amet fermentum massa tempus. Aliquam erat volutpat. Curabitur vel augue nec velit vehicula luctus. Morbi euismod orci at dolor efficitur, at dignissim leo dictum.\nSuspendisse potenti. Vivamus faucibus tincidunt nisl at lobortis. Sed fringilla, lacus ut sodales efficitur, mi nulla feugiat neque, non imperdiet nunc ipsum sed elit. Donec vel lacus nec leo vulputate viverra nec et elit. Proin id porttitor velit, sed ultrices lorem.\nNullam eu nulla nec sapien viverra eleifend. Pellentesque porttitor lorem ut ex efficitur, at rhoncus nisi tincidunt. Nunc feugiat diam vitae arcu porttitor, nec malesuada sapien fermentum. Integer ultricies purus eget dapibus tempor. Duis eu sapien nec metus ultricies pulvinar.\nTech Stack:\nFlutter, SQL, Deno\nLink:\nhttps://github.com/asv18/Circles-App").unwrap_or_default(),
     ];
     // let projects = vec!["Circles", "CampusConnect", "Josephson Junctions", "MITRA"];
 
     let projects_div = NodeRef::<Div>::new();
     let projects_vis = use_element_visibility(projects_div);
+
+    let education_div = NodeRef::<Div>::new();
+    let education_vis = use_element_visibility(education_div);
+
+    let contacts_div = NodeRef::<Div>::new();
+    let contacts_vis = use_element_visibility(contacts_div);
 
     view! {
         <div class="body">
@@ -62,7 +70,7 @@ pub fn Body() -> impl IntoView {
                         )
                     }
                 >
-                    <h1 class="heading-2">"My work"</h1>
+                    <h1>"My work"</h1>
                     <div class="column">
                         {projects
                             .iter()
@@ -75,7 +83,45 @@ pub fn Body() -> impl IntoView {
                             })
                             .collect_view()}
                     </div>
-                    <h2 class="heading-2">"...and more!"</h2>
+                    <a href="https://github.com/asv18/" target="_blank" class="heading-2">
+                        <h2>"...and more!"</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="child center">
+                <div
+                    node_ref=education_div
+                    class=move || {
+                        format!(
+                            " {} ",
+                            if education_vis.get() && toggle.get() {
+                                "delay content"
+                            } else {
+                                "content-hidden"
+                            },
+                        )
+                    }
+                >
+                    <h1>"My education"</h1>
+                    <div class="column"></div>
+                </div>
+            </div>
+            <div class="child center">
+                <div
+                    node_ref=contacts_div
+                    class=move || {
+                        format!(
+                            " {} ",
+                            if contacts_vis.get() && toggle.get() {
+                                "delay content"
+                            } else {
+                                "content-hidden"
+                            },
+                        )
+                    }
+                >
+                    <h1>"My contacts"</h1>
+                    <div class="column"></div>
                 </div>
             </div>
         </div>
