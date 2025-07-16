@@ -83,7 +83,11 @@ pub fn Body() -> impl IntoView {
                             })
                             .collect_view()}
                     </div>
-                    <a href="https://github.com/asv18/" target="_blank" class="heading-2">
+                    <a
+                        href="https://github.com/asv18/"
+                        target="_blank"
+                        class="heading-2 project-link"
+                    >
                         <h2>"...and more!"</h2>
                     </a>
                 </div>
@@ -103,6 +107,8 @@ pub fn Body() -> impl IntoView {
                     }
                 >
                     <h1>"My education"</h1>
+                    <div class="title">"University of Illinois, Urbana-Champaign"</div>
+                    <div class="breakline" />
                     <div class="column"></div>
                 </div>
             </div>
@@ -121,7 +127,20 @@ pub fn Body() -> impl IntoView {
                     }
                 >
                     <h1>"My contacts"</h1>
-                    <div class="column"></div>
+                    <div class="column">
+                        <div>"Email 1"</div>
+                        <div class="breakline" />
+                        <div>"Email 2"</div>
+                        <div class="breakline" />
+                        <div>"Github"</div>
+                        <div class="breakline" />
+                        <div>"LinkedIn"</div>
+                        <div class="breakline" />
+                        <div>"Insta"</div>
+                        <div class="breakline" />
+                        <div>"Link to resume"</div>
+                        <div class="breakline" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ pub fn ProjectContainer(
     view! {
         <div class="row">
             <div class="proj-container content">
-                <a href=project.link target="_blank" class="title">
+                <a href=project.link target="_blank" class="title proj-title">
                     {project.name}
                 </a>
                 // <div class="proj-spacer"></div>
