@@ -36,7 +36,7 @@ h1 {
 .root {
     // position: absolute;
     color: var(--color-text);
-    font-family: 'IBM Plex Sans';
+    font-family: 'Iosevka Aile';
 }
 
 .hidden {
@@ -149,13 +149,41 @@ h1 {
     color: var(--color-text-dark);
 }
 
+.spaced-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.spaced-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
 .title {
     // flex: 1;
     // font-family: 'IBM Plex Mono';
+    font-family: 'Iosevka';
     font-size: 2em;
     font-weight: bold;
     color: var(--color-text);
     width: fit-content;
+}
+
+.element {
+    size: 0.75em;
+    color: var(--color-text);
+}
+
+.element-link {
+    text-decoration-line: underline;
+}
+
+.element-link:hover {
+    color: var(--color-tertiary);
+    transition: all 300ms ease;
 }
 
 .proj-title {

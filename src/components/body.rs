@@ -107,9 +107,20 @@ pub fn Body() -> impl IntoView {
                     }
                 >
                     <h1>"My education"</h1>
-                    <div class="title">"University of Illinois, Urbana-Champaign"</div>
+                    <div class="spaced-title-row">
+                        <div class="title">"University of Illinois, Urbana-Champaign"</div>
+                        <div>"B.S. in Computer Science + Physics"</div>
+                    </div>
                     <div class="breakline" />
-                    <div class="column"></div>
+                    <div class="column">
+                        <div class="spaced-row">
+                            <div>"GPA: 3.9/4.0"</div>
+                            <div>"AUG 2024-MAY 2028"</div>
+                        </div>
+                        <div>
+                            "Relevant courses: Quantum Physics, Intro to Quantum Info Theory and Comp, Computer Architecture, Abstract Linear Algebra, Data Structures, Discrete Structures, Intro to Differential Equations, Relativity and Math Applications, Intro to Computational Physics, Intro to CS I & II"
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="child center">
@@ -128,18 +139,40 @@ pub fn Body() -> impl IntoView {
                 >
                     <h1>"My contacts"</h1>
                     <div class="column">
-                        <div>"Email 1"</div>
+                        <a
+                            href="mailto:aarnav.srivastava18@gmail.com"
+                            target="_blank"
+                            class="element element-link"
+                        >
+                            <div>"aarnav.srivastava18@gmail.com"</div>
+                        </a>
                         <div class="breakline" />
-                        <div>"Email 2"</div>
+                        <a
+                            href="mailto:aarnavs2@illinois.edu"
+                            target="_blank"
+                            class="element element-link"
+                        >
+                            <div>"aarnavs2@illinois.edu"</div>
+                        </a>
                         <div class="breakline" />
-                        <div>"Github"</div>
+                        <a
+                            href="https://github.com/asv18?tab=repositories"
+                            target="_blank"
+                            class="element element-link"
+                        >
+                            <div>"GitHub"</div>
+                        </a>
                         <div class="breakline" />
-                        <div>"LinkedIn"</div>
+                        <a
+                            href="https://www.linkedin.com/in/aarnav-srivastava-5aba35240/"
+                            target="_blank"
+                            class="element element-link"
+                        >
+                            <div>"LinkedIn"</div>
+                        </a>
                         <div class="breakline" />
-                        <div>"Insta"</div>
-                        <div class="breakline" />
-                        <div>"Link to resume"</div>
-                        <div class="breakline" />
+                    // <div>"Link to resume"</div>
+                    // <div class="breakline" />
                     </div>
                 </div>
             </div>
