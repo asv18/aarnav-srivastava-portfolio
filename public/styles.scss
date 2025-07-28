@@ -1,17 +1,3 @@
-/* --------------------- Open Props --------------------------- */
-
-/* the props */
-// @import "https://unpkg.com/open-props";
-
-/* optional imports that use the props */
-// @import "https://unpkg.com/open-props/normalize.min.css";
-// @import "https://unpkg.com/open-props/buttons.min.css";
-
-/* ------------------------------------------------------------ */
-
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 :root {
     --color-background: #200462;
     // --color-primary: #f71b9c;
@@ -26,17 +12,6 @@
 html {
     background-color: var(--color-background);
     margin: 0;
-}
-
-h1 {
-    font-size: 4.5rem;
-    font-family: 'IBM Plex Mono';
-}
-
-.root {
-    // position: absolute;
-    color: var(--color-text);
-    font-family: 'Iosevka Aile';
 }
 
 .hidden {
@@ -56,10 +31,6 @@ h1 {
     // justify-content: center;
     align-items:baseline;
     padding: 60px 80px;
-}
-
-.desc {
-    font-size: 1.25em;
 }
 
 .column {
@@ -147,6 +118,18 @@ h1 {
     transition: all 750ms ease-in;
 
     color: var(--color-text-dark);
+
+    // top: calc(50% - 150px);
+    // left: calc(50% - 150px);
+    // box-shadow:
+    //     inset 0 0 50px #fff,
+    //     inset 20px 0 80px #f0f,
+    //     inset -20px 0 80px #0ff,
+    //     inset 20px 0 300px #f0f,
+    //     inset -20px 0 300px #0ff,
+    //     0 0 50px #fff,
+    //     -10px 0 80px #f0f,
+    //     10px 0 80px #0ff;
 }
 
 .spaced-title-row {
@@ -163,12 +146,6 @@ h1 {
 }
 
 .title {
-    // flex: 1;
-    // font-family: 'IBM Plex Mono';
-    font-family: 'Iosevka';
-    font-size: 2em;
-    font-weight: bold;
-    color: var(--color-text);
     width: fit-content;
 }
 
@@ -189,14 +166,25 @@ h1 {
 .proj-title {
     transition: all 750ms ease;
     text-decoration-line: none;
-    text-decoration-color: var(--color-primary);
+}
+
+.proj-title-link {
+    text-decoration-color: var(--color-text-dark);
 }
 
 .proj-container:hover .proj-title {
     color: var(--color-text-dark);
+}
+
+.proj-container:hover .proj-title-link {
     text-decoration-line: underline;
     text-decoration-style: wavy;
     transition: all 750ms ease;
+}
+
+.inactive-link {
+   pointer-events: none;
+   cursor: default;
 }
 
 .proj-container:hover .title:hover {
@@ -271,7 +259,7 @@ h1 {
 .project-link {
     text-decoration-line: underline;
     text-decoration-style: double;
-    text-decoration-color: var(--color-primary);
+    text-decoration-color: var(--color-text);
 }
 
 .heading-2:hover {

@@ -9,7 +9,7 @@ pub fn Body() -> impl IntoView {
 
     // let titles = vec!["Software Developer", "Researcher", "Physicist", "Computer Scientist"];
     let projects = vec![
-        Project::from_str("Name:\nJosephson Junctions\nDescription:\nDeveloping an optimization tool utilizing a variety of stochastic searches, including Bayesian Optimization, Genetic Algorithms, and Gradient Descent to determine the ideal geometry of n-Josephson Junctions in accordance with current experimental data.\nTech Stack:\nPython, C++\nLink:\nhttps://github.com/asv18/Circles-App").unwrap_or_default(),
+        Project::from_str("Name:\nJosephson Junctions\nDescription:\nDeveloping an optimization tool utilizing a variety of stochastic searches, including Bayesian Optimization, Genetic Algorithms, and Gradient Descent to determine the ideal geometry of n-Josephson Junctions in accordance with current experimental data.\nTech Stack:\nPython, C++\nLink:\n").unwrap_or_default(),
         Project::from_str("Name:\nMITRA Project\nDescription:\nUsed Python scripts and prompt engineering to deduplicate data, used Rust and fasttext word embeddings to identify the language a file is written in, labeled data, and cleaned large (~30k+ characters) data sources. Work was presented at the International Sanskrit Computational Linguistics Symposium.\nTech Stack:\nRust, Python, PyTorch\nLink:\nhttps://github.com/dharmamitra/sanskrit-english-identification").unwrap_or_default(),
         Project::from_str("Name:\nCircles\nDescription:\nUsed Flutter, oak/Deno, CockroachDB, and Firebase to develop a social goal setting application to allow users to set and track goals visible through live feeds, connect with like-minded individuals via messaging, and foster communities around shared interests.\nTech Stack:\nFlutter, SQL, Deno\nLink:\nhttps://github.com/asv18/Circles-App").unwrap_or_default(),
     ];
@@ -43,7 +43,7 @@ pub fn Body() -> impl IntoView {
                     // <ul>{titles.into_iter().map(|n| view! { <li>{n}</li> }).collect_view()}</ul>
                     // <h2 class="heading-2">"at UIUC."</h2>
                     <p>
-                        "I'm an aspiring physicist, software developer, and researcher studying Computer Science + Physics at University of Illinois Urbana-Champaign."
+                        "I am an aspiring physicist, software developer, and researcher studying Computer Science + Physics at University of Illinois Urbana-Champaign."
                     </p>
                     <p>
                         "I have experience with ML design, language-processing, and quantum computing."
@@ -52,7 +52,7 @@ pub fn Body() -> impl IntoView {
                         "I am interested on working projects in the field of quantum information science and superconducting theory."
                     </p>
                     <p>
-                        "Currently, I'm working with the Bezryadin lab at UIUC on an AI model to analyze and optimize geometries for arrays of Josephson Junctions."
+                        "Currently, I'm working with the Bezryadin lab at UIUC on a model to analyze and optimize geometries for arrays of Josephson Junctions."
                     </p>
                 </div>
             </div>
