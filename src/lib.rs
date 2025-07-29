@@ -1,6 +1,7 @@
 use leptos::prelude::*;
 use leptos_meta::*;
 use leptos_router::{components::*, path};
+use leptos_use::{use_window_size, UseWindowSizeReturn};
 
 // Modules
 mod components;
