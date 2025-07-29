@@ -9,19 +9,22 @@ use leptos::wasm_bindgen::{prelude::Closure, JsCast};
 pub fn Typewriter(
     target_name: &'static str,
     per_char_duration: f64,
-    set_toggle: WriteSignal<bool>
+    set_toggle: WriteSignal<bool>,
 ) -> impl IntoView {
     let (name, set_name) = signal("".to_string());
 
-    Effect::new(move |_| {
-        typewriter(per_char_duration,  target_name, name, set_name, set_toggle)
-    });
+    Effect::new(move |_| typewriter(per_char_duration, target_name, name, set_name, set_toggle));
 
-    view! { <h1 class="typewriter">{name}</h1> }
+    view! {
+        <div class="typewriter-container">
+            <span class="typewriter-text">{name}</span>
+            <span class="typewriter-cursor" aria-hidden="true"></span>
+        </div>
+    }
 }
 
 use leptos::wasm_bindgen::prelude::*;
-use leptos::web_sys::{Window, window, js_sys::Date};
+use leptos::web_sys::{js_sys::Date, window, Window};
 
 fn get_window() -> Window {
     window().expect("no global 'window' exists")
