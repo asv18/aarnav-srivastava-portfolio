@@ -118,7 +118,7 @@ pub fn Body() -> impl IntoView {
                         </div>
                         <div>"Honors: James Scholar, Dean's List"</div>
                         <div>
-                            "Relevant courses: Quantum Physics, Intro to Quantum Info Theory and Comp, Computer Architecture, Abstract Linear Algebra, Data Structures, Discrete Structures, Intro to Differential Equations, Relativity and Math Applications, Intro to Computational Physics, Intro to CS I & II"
+                            "Relevant courses: Quantum Physics, Intro to Quantum Information Theory and Computation, Computer Architecture, Abstract Linear Algebra, Data Structures, Discrete Structures, Intro to Differential Equations, Relativity and Math Applications, Intro to Computational Physics, Intro to CS I & II"
                         </div>
                     </div>
                 </div>
