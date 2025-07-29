@@ -18,13 +18,6 @@ html {
     display: none,
 }
 
-.typewriter {
-    border-right: .15em solid var(--color-accent); /* The typewriter cursor */
-    white-space: nowrap;
-    animation: blink-caret .75s step-end infinite;
-    flex-wrap: wrap;
-}
-
 .scaffold {
     display: flex;
     flex-direction: column;
@@ -80,56 +73,9 @@ html {
 .profile {
     width: 200px;
     height: 200px;
-    border-radius: 100%;
+    border-radius: 40px;
     border: 5px solid var(--color-accent);
     border-style: double;
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--color-accent); }
-}
-
-.proj-container {
-    border: 4px;
-    border-style: groove;
-    border-radius: 10px;
-    border-color: var(--color-accent);
-    background-color: var(--color-primary);
-    min-height: 100px;
-    max-height: 100px;
-    width: 65%;
-    padding: 20px 15px;
-
-    overflow: hidden;
-
-    transition: all 750ms ease-out;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.proj-container:hover {
-    max-height: 1000px;
-    // width: 100%;
-    background-color: var(--color-tertiary);
-    border-color: var(--color-secondary);
-    transition: all 750ms ease-in;
-
-    color: var(--color-text-dark);
-
-    // top: calc(50% - 150px);
-    // left: calc(50% - 150px);
-    // box-shadow:
-    //     inset 0 0 50px #fff,
-    //     inset 20px 0 80px #f0f,
-    //     inset -20px 0 80px #0ff,
-    //     inset 20px 0 300px #f0f,
-    //     inset -20px 0 300px #0ff,
-    //     0 0 50px #fff,
-    //     -10px 0 80px #f0f,
-    //     10px 0 80px #0ff;
 }
 
 .spaced-title-row {
@@ -149,11 +95,6 @@ html {
     width: fit-content;
 }
 
-.element {
-    size: 0.75em;
-    color: var(--color-text);
-}
-
 .element-link {
     text-decoration-line: underline;
 }
@@ -163,106 +104,20 @@ html {
     transition: all 300ms ease;
 }
 
-.proj-title {
-    transition: all 750ms ease;
-    text-decoration-line: none;
-}
-
-.proj-title-link {
-    text-decoration-color: var(--color-text-dark);
-}
-
-.proj-container:hover .proj-title {
-    color: var(--color-text-dark);
-}
-
-.proj-container:hover .proj-title-link {
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    transition: all 750ms ease;
-}
-
 .inactive-link {
    pointer-events: none;
    cursor: default;
 }
 
-.proj-container:hover .title:hover {
-    text-decoration-color: var(--color-accent);
-    transition: all 300ms ease;
-}
-
-.proj-container-stack {
-    // flex: 2;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    // margin-bottom: 10px;
-    // flex:content;
-}
-
-.proj-container-hidden {
-    // flex: 0;
-    // scale: 0%;
-    margin-top: 10px;
-    opacity: 0%;
-    // max-height: 0px;
-    overflow: hidden;
-    transition: all 750ms ease;
-    // color: var(--color-tertiary);
-}
-
-.proj-container:hover .proj-container-hidden {
-    // flex: 1;
-    // scale: 100%;
-    opacity: 100%;
-    // max-height: fit-content;
-    transition: all 750ms ease;
-    // color: var(--color-text-dark);
-}
-
 .row {
     display: flex;
     flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    gap: 60px;
 }
-
-.svg {
-    height: 20px
-}
-
-// .flutter {
-//     color: #01A8FF;
-// }
 
 .breakline {
     border-top: 2px solid var(--color-primary);
     width: 100%;
-}
-
-.boxed {
-    padding: 2px 5px;
-    transition: all 750ms ease;
-    border: 2px solid var(--color-accent);
-}
-
-.proj-container:hover .boxed {
-    transition: all 750ms ease;
-    border: 2px solid var(--color-primary);
-}
-
-.heading-2 {
-    color: var(--color-text);
-    transition: all 300ms ease;
-}
-
-.project-link {
-    text-decoration-line: underline;
-    text-decoration-style: double;
-    text-decoration-color: var(--color-text);
-}
-
-.heading-2:hover {
-    text-decoration-color: var(--color-accent);
-    transition: all 300ms ease;
 }

@@ -49,8 +49,6 @@ fn typewriter(
 
     *g.borrow_mut() = Some(Closure::new(move || {
         if target.is_empty() {
-            // Drop our handle to this closure so that it will get cleaned
-            // up once we return.
             let _ = f.borrow_mut().take();
             signal_end.set(true);
 
@@ -63,16 +61,12 @@ fn typewriter(
         let elapsed = timestamp - *start;
         let progress = (elapsed / duration).min(1.0);
 
-        // Set the body's text content to the next character based on time elapsed
-        // requestAnimationFrame callback has fired.
-
         if progress >= 1.0 {
             let next_char = target.pop_front().unwrap() as char;
             signal.set(format!("{}{}", current_text.get(), next_char));
-            start_time = None; // reset timer for next character
+            start_time = None;
         }
 
-        // Schedule ourself for another requestAnimationFrame callback.
         request_animation_frame(f.borrow().as_ref().unwrap());
     }));
 

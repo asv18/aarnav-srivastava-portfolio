@@ -28,7 +28,6 @@ pub fn Body() -> impl IntoView {
         <div class="body">
             <div class="child">
                 <div class="heading">
-                    // <img src="/images/larry.jpeg" alt="Profile Image" class="profile" />
                     <Typewriter
                         target_name="Hi! I'm Aarnav Srivastava!"
                         per_char_duration=50.0
@@ -139,41 +138,46 @@ pub fn Body() -> impl IntoView {
                     }
                 >
                     <h1>"My contacts"</h1>
-                    <div class="column">
-                        <a
-                            href="mailto:aarnav.srivastava18@gmail.com"
-                            target="_blank"
-                            class="element element-link"
-                        >
-                            <div>"aarnav.srivastava18@gmail.com"</div>
-                        </a>
-                        <div class="breakline" />
-                        <a
-                            href="mailto:aarnavs2@illinois.edu"
-                            target="_blank"
-                            class="element element-link"
-                        >
-                            <div>"aarnavs2@illinois.edu"</div>
-                        </a>
-                        <div class="breakline" />
-                        <a
-                            href="https://github.com/asv18?tab=repositories"
-                            target="_blank"
-                            class="element element-link"
-                        >
-                            <div>"GitHub"</div>
-                        </a>
-                        <div class="breakline" />
-                        <a
-                            href="https://www.linkedin.com/in/aarnav-srivastava-5aba35240/"
-                            target="_blank"
-                            class="element element-link"
-                        >
-                            <div>"LinkedIn"</div>
-                        </a>
-                        <div class="breakline" />
-                    // <div>"Link to resume"</div>
-                    // <div class="breakline" />
+                    <div class="row">
+                        <div class="column" style:flex="4">
+                            <a
+                                href="mailto:aarnav.srivastava18@gmail.com"
+                                target="_blank"
+                                class="element element-link"
+                            >
+                                <div>"aarnav.srivastava18@gmail.com"</div>
+                            </a>
+                            <div class="breakline" />
+                            <a
+                                href="mailto:aarnavs2@illinois.edu"
+                                target="_blank"
+                                class="element element-link"
+                            >
+                                <div>"aarnavs2@illinois.edu"</div>
+                            </a>
+                            <div class="breakline" />
+                            <a
+                                href="https://github.com/asv18?tab=repositories"
+                                target="_blank"
+                                class="element element-link"
+                            >
+                                <div>"GitHub"</div>
+                            </a>
+                            <div class="breakline" />
+                            <a
+                                href="https://www.linkedin.com/in/aarnav-srivastava-5aba35240/"
+                                target="_blank"
+                                class="element element-link"
+                            >
+                                <div>"LinkedIn"</div>
+                            </a>
+                            <div class="breakline" />
+                        // <div>"Link to resume"</div>
+                        // <div class="breakline" />
+                        </div>
+                        <div style:flex="1">
+                            <img src="/images/larry.jpeg" alt="Profile Image" class="profile" />
+                        </div>
                     </div>
                 </div>
             </div>
