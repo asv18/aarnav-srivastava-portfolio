@@ -1,0 +1,31 @@
+.typewriter-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+
+.typewriter-text {
+  font-size: 4.5rem;
+  font-weight: bold;
+  font-family: "IBM Plex Mono";
+}
+
+.typewriter-cursor {
+  animation: blink-caret 0.75s step-end infinite;
+  font-weight: bold;
+  background-color: var(--color-accent);
+  width: 0.5em;
+  align-self: stretch;
+  margin-left: 0.15em;
+}
+
+@keyframes blink-caret {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
