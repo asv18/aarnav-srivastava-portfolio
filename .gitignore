@@ -2,3 +2,4 @@
 /dist
 _styles.scss
 .ignore/
+.vercel
