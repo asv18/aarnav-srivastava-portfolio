@@ -1,0 +1,84 @@
+.proj-container {
+  border: 4px;
+  border-style: groove;
+  border-radius: 10px;
+  border-color: var(--color-accent);
+  background-color: var(--color-primary);
+  min-height: 100px;
+  max-height: 100px;
+  width: 65%;
+  padding: 20px 15px;
+  overflow: hidden;
+  transition: all 750ms ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxed {
+  padding: 2px 5px;
+  transition: all 750ms ease;
+  border: 2px solid var(--color-accent);
+}
+
+.project-link {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-color: var(--color-text);
+}
+
+.proj-container-hidden {
+  margin-top: 10px;
+  opacity: 0%;
+  overflow: hidden;
+  transition: all 750ms ease;
+}
+
+.proj-container-stack {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.proj-title {
+  transition: all 750ms ease;
+  text-decoration-line: none;
+}
+
+.proj-title-link {
+  text-decoration-color: var(--color-secondary);
+}
+
+.proj-container:hover .proj-title {
+  color: var(--color-secondary);
+}
+
+.proj-container:hover .proj-title-link {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  transition: all 750ms ease;
+}
+
+.proj-container:hover .title:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+  transition: all 300ms ease;
+}
+
+.proj-container:hover .proj-container-hidden {
+  opacity: 100%;
+  transition: all 750ms ease;
+}
+
+.proj-container:hover .boxed {
+  transition: all 750ms ease;
+  border: 2px solid var(--color-secondary);
+}
+
+.proj-container:hover {
+  max-height: 1000px;
+  background-color: var(--color-tertiary);
+  border-color: var(--color-secondary);
+  transition: all 750ms ease-in;
+  color: var(--color-text-dark);
+}

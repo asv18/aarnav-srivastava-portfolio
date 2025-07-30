@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
+  <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
+  
+  <link rel="stylesheet" href="/text-3eecc7202e883ebc.css" integrity="sha384&#x2D;bTPaDMeBQYUeydJnIt&#x2B;9asrrgD9all5cNkLnVjjYRgqgyxbxhvirC&#x2F;SfuD1o3Zm7"/>
+  <link rel="stylesheet" href="/project-685e8706ff4f28d9.css" integrity="sha384&#x2D;F9ClmhzposHPvB9&#x2F;8822dSfW4E9Bvp0swx&#x2B;ClRbg&#x2B;KCF9KCblxFkbEsZizypokoG"/>
+  <link rel="stylesheet" href="/typewriter-b0281d77024e8f73.css" integrity="sha384&#x2D;PEpaPdfD6sSRVHG9hdIWbdWpzH75uqGfF9itnETT3xJrHTV97OJrO8LgUSBWP40X"/>
+  <link rel="stylesheet" href="/styles-f5c129aecbf9a0d7.css" integrity="sha384&#x2D;sjF&#x2F;Tu7x23mE9SzuPNgHb23ZIFj8DrTJGxn8C8N2T9M0CwTcYPGdMp0iEaEcisvA"/>
+
+  <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
+  <link rel="icon" href="/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384&#x2D;YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi&#x2B;qSXEpwp&#x2B;yM4BW"/>
+  
+
+  <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+  
+<script type="module">
+import init, * as bindings from '/portfolio-website-40063a09613cf704.js';
+const wasm = await init({ module_or_path: '/portfolio-website-40063a09613cf704_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+<link rel="modulepreload" href="/portfolio-website-40063a09613cf704.js" crossorigin="anonymous" integrity="sha384-C6KIBvBvjN1mEIxFaQl/gFeP95LPedQLBCJ+rXvmBzFPl6eCItukUa2/8aIrWx4Y"><link rel="preload" href="/portfolio-website-40063a09613cf704_bg.wasm" crossorigin="anonymous" integrity="sha384-aVQVSqpXfM8/3sxWGmZsgWRM80KQqaI/hsAJbql4f6L/4XmACcLBb3GVrje/G7Pb" as="fetch" type="application/wasm"></head>
+
+<body>
+</body>
+
+</html>
