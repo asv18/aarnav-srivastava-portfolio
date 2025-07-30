@@ -139,7 +139,7 @@ pub fn Body() -> impl IntoView {
                 >
                     <h1>"My contacts"</h1>
                     <div class="row">
-                        <div class="column">
+                        <div class="column" style:flex="4">
                             <a
                                 href="mailto:aarnav.srivastava18@gmail.com"
                                 target="_blank"
