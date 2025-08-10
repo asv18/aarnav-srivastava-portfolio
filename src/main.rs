@@ -8,7 +8,7 @@ fn main() {
 
     mount_to_body(|| {
         view! {
-            // 
+            //
             <div class="root">
                 <App />
             </div>
